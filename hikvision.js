@@ -14,7 +14,7 @@ var imgOptions = {
 // @google-cloud/storage options
 var gcsconfig = {
     projectId: 'Vision-test-01-9bbd739b0829' ,
-    keyFilename:    './keys/Vision-test-01-9bbd739b0829.json'
+    keyFilename:    './keys/Vision-test-01-197b246e73de.json'
 };
 var bucket = gcs.bucket('cctv001');
 // mode-hikvision-api options
@@ -84,20 +84,20 @@ function getImages(){
     // the .then () returns a promise
     // so subsequent download.image() functions are executed synchronously
     // see http://exploringjs.com/es6/ch_promises.html
-    imgOptions.dest = path + getDateTime() + '_img2.jpg';
+    imgOptions.dest = path + getDateTime() + '_img1.jpg';
     download.image(imgOptions)
         .then(({ filename }) => {
-        console.log('File saved to', filename);
+        console.log(getDateTime() + ' File saved to', filename);
         storeImage(filename);
         imgOptions.dest = path + getDateTime() + '_img2.jpg';
         download.image(imgOptions)
             .then(({ filename }) => {
-            console.log('File saved to', filename);
+            console.log(getDateTime() + ' File saved to', filename);
             storeImage(filename);
             imgOptions.dest = path + getDateTime() + '_img3.jpg';
             download.image(imgOptions)
                 .then(({ filename }) => {
-                console.log('File saved to', filename);
+                console.log(getDateTime() + ' File saved to', filename);
                 storeImage(filename);
                 })
                 .catch((err) => {
