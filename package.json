@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/slartibastfast/cctv#readme",
   "dependencies": {
-    "@google-cloud/storage": "^1.2.1",
+    "@google-cloud/storage": "^5.19.0",
     "image-downloader": "^3.2.2",
     "node-hikvision-api": "git+https://github.com/ragingcomputer/node-hikvision-api.git"
   }
